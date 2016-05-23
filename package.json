@@ -5,12 +5,19 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app/server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "^6.0.4",
     "body-parser": "^1.15.1",
-    "express": "^4.13.4"
+    "eslint": "^2.10.2",
+    "eslint-plugin-react": "^5.1.1",
+    "express": "^4.13.4",
+    "stylelint": "^6.5.1"
+  },
+  "dependencies": {
+    "react-bootstrap": "^0.29.4"
   }
 }
