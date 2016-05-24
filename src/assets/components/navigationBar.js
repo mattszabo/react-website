@@ -27,9 +27,6 @@ class NavBar extends React.Component {
                     navBarTabs={this.props.navBarTabs}
                     _updateTabSelection={this._updateTabSelection.bind(this)}
                 />
-                <div className="content">
-                    <Content selectedTab={this.state.selectedTab} />
-                </div>
             </div>
         );
     }
@@ -108,39 +105,6 @@ class NavBarTab extends React.Component {
         );
     }
 }
-
-var Content = React.createClass({
-    render: function(){
-        return(
-            <div className="content">
-                {this.props.selectedTab === 0 ?
-                <div className="mike">
-                    <img src="http://s.mlkshk.com/r/104TN" />
-                </div>
-                :null}
-
-                {this.props.selectedTab === 1 ?
-                <div className="donnie">
-                    <img src="http://s.mlkshk.com/r/103AG" />
-                </div>
-                :null}
-
-                {this.props.selectedTab === 2 ?
-                <div className="raph">
-                    <img src="http://s.mlkshk.com/r/JAUD" />
-                </div>
-                :null}
-
-                {this.props.selectedTab === 3 ?
-                <div className="leo">
-                    <img src="http://s.mlkshk.com/r/ZJPL" />
-                </div>
-                :null}
-            </div>
-        );
-    }
-});
-
 
 var navBarList = [
     {id: 0, url: "#", text: "Home"},
