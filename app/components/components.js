@@ -7,7 +7,7 @@ class ListBox extends React.Component {
         <div>Hello</div>
         <div>
           <ul>
-            {skillList.map(topic => <li>{topic}</li>)}
+            {skillList.map((topic, index) => <li key={index}>{topic}</li>)}
           </ul>
         </div>
       </div>
