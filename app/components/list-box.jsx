@@ -1,4 +1,6 @@
-class ListBox extends React.Component {
+import React from 'react';
+
+export default class ListBox extends React.Component {
 
   render () {
     const skillList = ['HTML', 'JavaScript', 'jQuery', 'AJAX', 'React', 'CSS'];
@@ -14,8 +16,3 @@ class ListBox extends React.Component {
     );
   }
 }
-
-ReactDOM.render(
-  <ListBox />,
-  document.getElementById("content")
-);
