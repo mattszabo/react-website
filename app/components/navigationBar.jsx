@@ -1,4 +1,6 @@
-class NavBar extends React.Component {
+import React from 'react';
+
+export default class NavBar extends React.Component {
     constructor() {
         super();
         console.log("settings state of NavBar");
@@ -140,16 +142,3 @@ var Content = React.createClass({
         );
     }
 });
-
-
-var navBarList = [
-    {id: 0, url: "#", text: "Home"},
-    {id: 1, url: "#", text: "Projects"},
-    {id: 2, url: "#", text: "Git"},
-    {id: 3, url: "#", text: "Resume"},
-];
-
-ReactDOM.render(
-  <NavBar navBarTabs={navBarList} />,
-  document.getElementById("navigation-bar")
-);
