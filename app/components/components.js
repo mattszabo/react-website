@@ -1,5 +1,5 @@
 class ListBox extends React.Component {
-  
+
   render () {
     const skillList = ['HTML', 'JavaScript', 'jQuery', 'AJAX', 'React', 'CSS'];
     return (
