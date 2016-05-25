@@ -17,9 +17,13 @@ var app = express();
 app.set('port', (process.env.PORT || 3000));
 
 app.use('/', express.static( "" + __dirname + ""));
-console.log(__dirname)
-app.use('/scripts', express.static(path.join(__dirname, '..', 'node_modules')));
-
+console.log(path.join(__dirname));
+app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
+console.log(path.join(__dirname, 'node_modules'));
+app.use('/vendors', express.static(path.join(__dirname, 'app', 'vendors')));
+console.log(path.join(__dirname, 'app', 'vendors'));
+app.use('/components', express.static(path.join(__dirname, 'app', 'components')));
+app.use('/styles', express.static(path.join(__dirname, 'app', 'styles')));
 // Additional middleware which will set headers that we need on each request.
 app.use(function(req, res, next) {
     // Set permissive CORS header - this allows this server to be used only as

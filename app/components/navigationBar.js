@@ -114,26 +114,26 @@ var Content = React.createClass({
         return(
             <div className="content">
                 {this.props.selectedTab === 0 ?
-                <div className="mike">
-                    <img src="http://s.mlkshk.com/r/104TN" />
+                <div className="home">
+                    Home
                 </div>
                 :null}
 
                 {this.props.selectedTab === 1 ?
-                <div className="donnie">
-                    <img src="http://s.mlkshk.com/r/103AG" />
+                <div className="projects">
+                    Projects
                 </div>
                 :null}
 
                 {this.props.selectedTab === 2 ?
-                <div className="raph">
-                    <img src="http://s.mlkshk.com/r/JAUD" />
+                <div className="git">
+                    Git
                 </div>
                 :null}
 
                 {this.props.selectedTab === 3 ?
-                <div className="leo">
-                    <img src="http://s.mlkshk.com/r/ZJPL" />
+                <div className="resume">
+                    Resume
                 </div>
                 :null}
             </div>
