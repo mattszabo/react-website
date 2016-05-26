@@ -1,29 +1,28 @@
-/*
-
-Matt's single page app that was written in:
-______                _
-| ___ \              | |
-| |_/ /___  __ _  ___| |_
-|    // _ \/ _` |/ __| __|
-| |\ \  __/ (_| | (__| |_
-\_| \_\___|\__,_|\___|\__|
-
-You should hire him.
-
-*/
+/////////////////////////////////////////////////
+// Matt's single page app that was written in: //
+//          ______                _            //
+//         | ___ \              | |            //
+//         | |_/ /___  __ _  ___| |_           //
+//         |    // _ \/ _` |/ __| __|          //
+//         | |\ \  __/ (_| | (__| |_           //
+//         \_| \_\___|\__,_|\___|\__|          //
+//                                             //
+//                        You should hire him. //
+/////////////////////////////////////////////////
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import jQuery from 'jquery';
+import $ from 'jquery';
 
-import ListBox from './components/list-box';
-import NavBar from './components/navigationBar';
+import ListBox from './components/ListBox';
+import NavBar from './components/NavBar';
 
 let navBarList = [
     {id: 0, url: "#", text: "Home"},
     {id: 1, url: "#", text: "Projects"},
     {id: 2, url: "#", text: "Git"},
     {id: 3, url: "#", text: "Resume"},
+    {id: 4, url: "#", text: "Skills"}
 ];
 
 class App extends React.Component {
@@ -37,7 +36,7 @@ class App extends React.Component {
   }
 }
 
-jQuery(function() {
+$(function() {
   ReactDOM.render(
     <App />,
     document.getElementById("content")
