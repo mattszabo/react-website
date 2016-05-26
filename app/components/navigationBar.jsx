@@ -3,31 +3,22 @@ import React from 'react';
 export default class NavBar extends React.Component {
     constructor() {
         super();
-        console.log("settings state of NavBar");
-        this.state = {
-            selectedTab: 0
-        }
-        console.log("navbar selected tab is: " + this.state.selectedTab);
-        console.log("this is: ");
-        console.log(this);
+        this.state = {selectedTab: 0}
     }
 
     _updateTabSelection(tab) {
-        console.log("now in updateTabSelection(tab) inside NavBar");
-        console.log("this is: ");
-        console.log(this);
-        this.setState({
-            selectedTab: tab.id
-        });
+        this.setState({selectedTab: tab.id});
     }
 
+    // the content section will eventually go when I get up to
+    // learning about react routing
     render() {
         return(
             <div>
                 <NavBarTabList
                     selectedTab={this.state.selectedTab}
                     navBarTabs={this.props.navBarTabs}
-                    _updateTabSelection={this._updateTabSelection.bind(this)}
+                    onClick={this._updateTabSelection.bind(this)}
                 />
                 <div className="content">
                     <Content selectedTab={this.state.selectedTab} />
@@ -38,11 +29,8 @@ export default class NavBar extends React.Component {
 }
 
 class NavBarTabList extends React.Component {
-    _handleNavBarClick(tab) {
-        console.log("propegated to narbartablist. selected tab is: ");
-        console.log(this.props.selectedTab);
-        this.props._updateTabSelection(tab);
-        console.log("done updatetabselection")
+    _handleClick(tab) {
+        this.props.onClick(tab);
     }
 
     render() {
@@ -58,7 +46,7 @@ class NavBarTabList extends React.Component {
                             key = {tab.id}
                             url = {tab.url}
                             text = {tab.text}
-                            _handleNavBarClick = {this._handleNavBarClick.bind(this, tab)}
+                            onClick = {this._handleClick.bind(this, tab)}
                             isSelected={(this.props.selectedTab === tab.id)}
                         />
                     )}
@@ -70,42 +58,17 @@ class NavBarTabList extends React.Component {
 }
 
 class NavBarTab extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            isActive: false
-        }
-    }
 
     _handleTabClick(e) {
-        console.log("tab clicked: " + this.props.text + " setting state...");
-        console.log("************");
-        console.log("this.props.isSelected: " + this.props.isSelected);
-        console.log("************");
-
         e.preventDefault();
-        this.setState({
-            isActive: this.props.isSelected
-        });
-        console.log("just set state for isActive to true");
-        console.log("calling navbarclick handler in navbarlist");
-        this.props._handleNavBarClick();
-        console.log("returned from navbarclick handler in navbarlist");
+        this.props.onClick();
     }
 
     render() {
-
-        let _className = "";
-        if(this.state.isActive === true) {
-            _className = "active";
-        }
         return (
-            <li className = {_className}>
-                <a
-                onClick={this._handleTabClick.bind(this)}
-                href={this.props.url}>
-                    {this.props.text}
-                </a>
+            <li className = {(this.props.isSelected === true) ? "active" : ""}>
+                <a onClick={this._handleTabClick.bind(this)}
+                href={this.props.url}> {this.props.text} </a>
             </li>
         );
     }
