@@ -1,5 +1,13 @@
 import React from 'react';
 
+let navBarList = [
+    {id: 0, url: "#", text: "Home"},
+    {id: 1, url: "#", text: "Projects"},
+    {id: 2, url: "#", text: "Git"},
+    {id: 3, url: "#", text: "Resume"},
+    {id: 4, url: "#", text: "Skills"}
+];
+
 export default class NavBar extends React.Component {
   constructor() {
     super();
@@ -22,7 +30,7 @@ export default class NavBar extends React.Component {
             </div>
             <NavBarTabList
               selectedTab={this.state.selectedTab}
-              navBarTabs={this.props.navBarTabs}
+              navBarTabs={navBarList}
               onClick={this._updateTabSelection.bind(this)}
             />
           </div>
