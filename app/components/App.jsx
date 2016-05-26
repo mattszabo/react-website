@@ -22,15 +22,14 @@ export default class App extends React.Component {
     return(
       <div>
         <NavBar />
-        <ListBox />
       </div>
     );
   }
 }
 
-$(function() {
-  ReactDOM.render(
-    <App />,
-    document.getElementById("content")
-  );
-})
+// $(function() {
+//   ReactDOM.render(
+//     <App />,
+//     document.getElementById("content")
+//   );
+// })
