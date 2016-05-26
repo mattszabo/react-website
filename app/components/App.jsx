@@ -26,10 +26,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-// $(function() {
-//   ReactDOM.render(
-//     <App />,
-//     document.getElementById("content")
-//   );
-// })
