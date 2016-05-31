@@ -12,7 +12,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
+import jQuery from 'jquery';
 
 import NavBar from './NavBar';
 import ListBox from './ListBox';

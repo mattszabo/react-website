@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
-
+console.log(TARGET);
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build'),
@@ -98,5 +98,9 @@ if(TARGET === 'start' || !TARGET) {
 
 
 if(TARGET === 'build') {
-  module.exports = merge(common, {});
+  module.exports = merge(common, {
+      plugins: [
+          
+      ]
+  });
 }
