@@ -1,4 +1,5 @@
 import React from 'react';
+
 import NavBarData from './NavBarData';
 import NavBarItem from './NavBarItem';
 
