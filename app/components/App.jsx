@@ -14,7 +14,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import jQuery from 'jquery';
 
-import NavBar from './NavBar';
+import NavBar from './NavBar/NavBar';
 import ListBox from './ListBox';
 
 export default class App extends React.Component {
