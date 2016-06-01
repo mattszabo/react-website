@@ -1,4 +1,3 @@
-import './styles/normalise.css';
 import './styles/main.css';
 
 import React from 'react';
