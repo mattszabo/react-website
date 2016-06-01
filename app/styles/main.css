@@ -6,9 +6,6 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li {
   font-size: 100%;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
-ul {
-  list-style-type: none;
-}
 a {
   text-decoration: none;
   color: inherit;
@@ -21,6 +18,7 @@ a {
   font-size: 18px;
 }
 .navbar ul {
+  list-style-type: none;
   float: right;
   margin: 10px;
 }

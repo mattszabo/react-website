@@ -1,7 +1,9 @@
 import React from 'react';
 import NavBarData from './NavBarData';
+import NavBarItem from './NavBarItem';
 
-// Main class that handles
+// Renders the navbar items and also acts as the controller by handling
+// navbar item clicks that are passed up by the NavBarItem class
 export default class NavBar extends React.Component {
   constructor() {
     super();
@@ -37,24 +39,6 @@ export default class NavBar extends React.Component {
           </ul>
         </div>
       </div>
-    );
-  }
-}
-
-// Handles the event of an item being clicked
-class NavBarItem extends React.Component {
-  _handleItemClick(e) {
-    e.preventDefault();
-    this.props.onClick();
-  }
-
-  render() {
-    let _class = (this.props.isSelected === true) ? "active" : "";
-    return (
-      <li className = {_class}>
-        <a onClick={this._handleItemClick.bind(this)}
-        href={this.props.url}> {this.props.text} </a>
-      </li>
     );
   }
 }
