@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class ListBox extends React.Component {
+export default class Skills extends React.Component {
 
   render () {
     const skillList = ['HTML', 'JavaScript', 'jQuery', 'AJAX', 'React', 'CSS'];
