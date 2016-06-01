@@ -1,12 +1,51 @@
 html, body, h1, h2, h3, h4, p, div, ul, ol, li {
-    padding: 0;
-    border: 0;
-    margin: 0;
-    font: inherit;
-    font-size: 100%;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
-
 ul {
-    list-style-type: none;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.navbar, .brand {
+  padding: 0 10px;
+  margin: 10px;
+  background-color: #000000;
+  color: #3890E8;
+  font-size: 18px;
+}
+.navbar ul {
+  float: right;
+  margin: 10px;
+}
+.navbar li {
+  display: inline-block;
+  padding: 0 10px;
+  border-right: 2px solid #000000;
+}
+.navbar li.active {
+  border-left: 2px solid #3890E8;
+  border-right: 2px solid #3890E8;
+}
+.navbar a:active {
+  color: #4104C4;
+}
+.brand {
+  float: left;
+}
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
 }
