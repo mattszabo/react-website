@@ -13,7 +13,7 @@ export default class Layout extends React.Component {
           {this.props.children}
         </div>
         <div className='footer'>
-          footer
+          <a href='mailto:szabo.matthew@gmail.com'>Contact</a>
         </div>
       </div>
     );
