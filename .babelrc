@@ -8,6 +8,9 @@
       "presets": [
         "react-hmre"
       ]
+    },
+    "build": {
+      "plugins": ["transform-react-constant-elements"] 
     }
   }
 }
