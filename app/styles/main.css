@@ -1,4 +1,4 @@
-html, body, h1, h2, h3, h4, p, div, ul, ol, li {
+html, body, h1, h2, h3, h4, p, div, ul, ol, li, a {
   padding: 0;
   border: 0;
   margin: 0;
@@ -10,17 +10,39 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.layout {
+  border: 1px solid #ff0000;
+  margin: 5px 0;
+  padding: 0;
+}
+.header {
+  border: 1px solid #0000ff;
+  margin: 5px 0;
+  padding: 5px 0;
+}
+.content {
+  border: 1px solid #00ff00;
+  margin: 5px;
+  padding: 15px;
+  text-align: center;
+}
+.content ul, .navbar ul {
+  list-style-type: none;
+}
+.footer {
+  border: 1px solid #0000ff;
+  margin: 5px;
+}
 .navbar, .brand {
   padding: 0 10px;
-  margin: 10px;
+  margin: 10px 0;
   background-color: #000000;
   color: #3890E8;
   font-size: 18px;
 }
 .navbar ul {
-  list-style-type: none;
   float: right;
-  margin: 10px;
+  margin: 10px 0;
 }
 .navbar li {
   display: inline-block;
