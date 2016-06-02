@@ -1,11 +1,17 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
-
+const validate = require('webpack-validator');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
+console.log("TARGET: ");
 console.log(TARGET);
+
+if(!TARGET) {
+  console.log(process.env.npm_lifecycle_event);
+}
+
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build'),
@@ -35,7 +41,7 @@ const common = {
         // Include accepts either a path or an array of paths.
         include: PATHS.styles
       },
-  {
+      {
         test: /\.jsx?$/,
         // Enable caching for improved performance during development
         // It uses default OS directory by default. If you need something
@@ -50,57 +56,57 @@ const common = {
 
 };
 
+var config;
+switch(process.env.npm_lifecycle_event) {
+  case 'build':
+    config = merge(common, {
+      devtool: 'cheap-module-source-map'
+    });
+    break;
+  case 'start':
+    config = merge(common, {
+      devtool: 'eval-source-map',
 
-if(TARGET === 'start' || !TARGET) {
+      //more resource intensive but use it if watching stops working
+      watchOptions: {
+        poll: true
+      },
 
-  module.exports = merge(common, {
+      devServer: {
+        contentBase: PATHS.build,
 
-  devtool: 'eval-source-map',
+        // Enable history API fallback so HTML5 History API based
+        // routing works. This is a good default that will come
+        // in handy in more complicated setups.
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        
 
-  //more resource intensive but use it if watching stops working
-  watchOptions: {
-  	poll: true
-  },
+        // Display only errors to reduce the amount of output.
+        stats: 'errors-only',
 
-    devServer: {
-      contentBase: PATHS.build,
-
-      // Enable history API fallback so HTML5 History API based
-      // routing works. This is a good default that will come
-      // in handy in more complicated setups.
-      historyApiFallback: true,
-      hot: true,
-      inline: true,
-      progress: true,
-
-      // Display only errors to reduce the amount of output.
-      stats: 'errors-only',
-
-      // Parse host and port from env so this is easy to customize.
-      //
-      // If you use Vagrant or Cloud9, set
-      // host: process.env.HOST || '0.0.0.0';
-      //
-      // 0.0.0.0 is available to all network devices unlike default
-      // localhost
-      host: process.env.HOST,
-      port: process.env.PORT
-    },
-    plugins: [
-      new webpack.HotModuleReplacementPlugin(),
-      new NpmInstallPlugin({
-      	save: true //--save
-      })
-    ]
-  });
-
-}
-
-
-if(TARGET === 'build') {
-  module.exports = merge(common, {
+        // Parse host and port from env so this is easy to customize.
+        //
+        // If you use Vagrant or Cloud9, set
+        // host: process.env.HOST || '0.0.0.0';
+        //
+        // 0.0.0.0 is available to all network devices unlike default
+        // localhost
+        host: process.env.HOST,
+        port: process.env.PORT
+      },
       plugins: [
-
+        new webpack.HotModuleReplacementPlugin(),
+        new NpmInstallPlugin({
+          save: true //--save
+        })
       ]
-  });
+    });
+    break;
+  default:
+    config = merge(common, {});
 }
+
+module.exports = validate(config);
+
