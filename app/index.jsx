@@ -12,7 +12,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, IndexRoute, hashHistory, Redirect} from 'react-router';
+import {Router, Route, hashHistory, Redirect} from 'react-router';
 
 import Layout from './components/Layout';
 import Skills from './components/Skills';
