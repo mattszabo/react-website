@@ -63,11 +63,18 @@ const common = {
 
 var config;
 switch(process.env.npm_lifecycle_event) {
+  //** PRODUCTION ** //
   case 'build':
     config = merge(common, {
-      devtool: 'cheap-module-source-map'
+      devtool: 'cheap-module-source-map',
+      plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {warnings: false}
+        })
+      ]
     });
     break;
+  // ** DEV ** //
   case 'start':
     config = merge(common, {
       devtool: 'eval-source-map',
