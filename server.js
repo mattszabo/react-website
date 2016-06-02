@@ -16,7 +16,7 @@ var app = express();
 
 app.set('port', (process.env.PORT || 3000));
 
-app.use('/', express.static( "" + __dirname + ""));
+app.use('/', express.static('' + __dirname + ''));
 console.log(path.join(__dirname));
 app.use('/scripts', express.static(path.join(__dirname, 'node_modules')));
 console.log(path.join(__dirname, 'node_modules'));

@@ -5,8 +5,6 @@ const validate = require('webpack-validator');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
-console.log("TARGET: ");
-console.log(TARGET);
 
 if(!TARGET) {
   console.log(process.env.npm_lifecycle_event);
@@ -25,7 +23,7 @@ const common = {
     app: PATHS.app
   },
   resolve: {
-  	extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx']
   },
   output: {
   path: PATHS.build,
@@ -33,6 +31,13 @@ const common = {
   },
 
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        loaders: ['eslint'],
+        include: PATHS.app
+      }
+    ],
     loaders: [
       {
         // Test expects a RegExp! Note the slashes!

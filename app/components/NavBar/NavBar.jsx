@@ -17,13 +17,12 @@ export default class NavBar extends React.Component {
 
   _updateItemSelection(itemId) {
     this.setState({selectedItem: itemId});
-    console.log("selectedItem: " + itemId);
   }
 
   render() {
     return(
-      <div className="navbar group">
-        <div className="brand">
+      <div className='navbar group'>
+        <div className='brand'>
           {this.state.brand.text}
         </div>
         <div>
