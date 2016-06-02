@@ -12,8 +12,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import jQuery from 'jquery';
-import {Router, Route, IndexRoute, hashHistory} from 'react-router';
+import {Router, Route, hashHistory, Redirect} from 'react-router';
 
 import Layout from './components/Layout';
 import Skills from './components/Skills';
@@ -26,6 +25,7 @@ import './styles/main.css';
 
 const app = (
 	<Router history={hashHistory}>
+		<Redirect from="/" to="/home" />
 		<Route path="/" component={Layout}>
 			<Route path="home" component={Home} />
 			<Route path="projects" component={Projects} />
@@ -43,6 +43,5 @@ export default class App extends React.Component {
     );
   }
 }
-
 
 ReactDOM.render(<App />, document.getElementById('app'));
