@@ -16,7 +16,11 @@ const PATHS = {
   styles: path.join(__dirname, 'app', 'styles')
 };
 
-process.env.BABEL_ENV = TARGET;
+if(TARGET === 'build') {
+  process.env.BABEL_ENV= 'production';  
+} else {
+  process.env.BABEL_ENV = TARGET;
+}
 
 const common = {
   entry: {
@@ -67,9 +71,18 @@ switch(process.env.npm_lifecycle_event) {
   case 'build':
     config = merge(common, {
       devtool: 'cheap-module-source-map',
+      // Unfortunately there's no way to only ignore third party libraries... it's
+      // all or nothing. I may eventually  have my own warnings, but i'll take this
+      // risk and try to remember to turn on these warnings occasionally. 
       plugins: [
         new webpack.optimize.UglifyJsPlugin({
           compress: {warnings: false}
+        }),
+        // use prod node environment
+        new webpack.DefinePlugin({
+          'process.env': {
+            'NODE_ENV': JSON.stringify('production')
+          }
         })
       ]
     });
