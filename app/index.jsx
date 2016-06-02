@@ -24,16 +24,16 @@ import Git from './components/Git'
 import './styles/main.css';
 
 const app = (
-	<Router history={hashHistory}>
-		<Redirect from="/" to="/home" />
-		<Route path="/" component={Layout}>
-			<Route path="home" component={Home} />
-			<Route path="projects" component={Projects} />
-			<Route path="git" component={Git} />
-			<Route path="resume" component={Resume} />
-			<Route path="skills" component={Skills} />
-		</Route>
-	</Router>
+  <Router history={hashHistory}>
+    <Redirect from="/" to="/home" />
+    <Route path="/" component={Layout}>
+      <Route path="home" component={Home} />
+      <Route path="projects" component={Projects} />
+      <Route path="git" component={Git} />
+      <Route path="resume" component={Resume} />
+      <Route path="skills" component={Skills} />
+    </Route>
+  </Router>
 );
 
 export default class App extends React.Component {
