@@ -4,7 +4,7 @@ export default class Home extends React.Component {
 	render() {
 		return (
 			<div className='page page-home'>
-				Hello, you should hire Matt.
+				Hi, you should hire Matt.
 			</div>
 		);
 	}
