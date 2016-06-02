@@ -1,4 +1,4 @@
-html, body, h1, h2, h3, h4, p, div, ul, ol, li {
+html, body, h1, h2, h3, h4, p, div, ul, ol, li, a {
   padding: 0;
   border: 0;
   margin: 0;
@@ -10,32 +10,92 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.navbar, .brand {
-  padding: 0 10px;
-  margin: 10px;
-  background-color: #000000;
+.layout {
+  background-color: #313144;
+}
+.header {
+}
+.content {
+  text-align: center;
+  margin: 0 10px 0 10px;
+}
+.content ul, .navbar ul {
+  list-style-type: none;
+}
+.footer {
+  text-align: center;
+  background-color: #313144;
   color: #3890E8;
+  padding: 10px 0;
+  margin-right: 10px;
+}
+.navbar, .brand {
+  padding: 0 ;
+  margin: 0;
+  background-color: #313144;
+  color: #000000;
   font-size: 18px;
 }
+.brand {
+  color: #3890E8;
+}
 .navbar ul {
-  list-style-type: none;
   float: right;
-  margin: 10px;
+  margin: 0 10px 0 0;
 }
 .navbar li {
   display: inline-block;
-  padding: 0 10px;
-  border-right: 2px solid #000000;
-}
-.navbar li.active {
-  border-left: 2px solid #3890E8;
-  border-right: 2px solid #3890E8;
+  padding: 10px 10px;
+  width: 65px;
+  text-align: center;
 }
 .navbar a:active {
   color: #4104C4;
 }
+.page {
+  padding: 150px 0 150px 0;
+}
+.page-home {
+  background-color: #5fb3f9;
+}
+.navbar .home {
+  background-color: #5fb3f9;
+  color: #000000;
+}
+.page-projects {
+  background-color: #60ead3;
+}
+.navbar .projects {
+  background-color: #60ead3;
+  color: #000000;
+}
+.page-git {
+  background-color: #fda660;
+}
+.navbar .git {
+  background-color: #fda660;
+  color: #000000;
+}
+.page-resume {
+  background-color: #fd7b87;
+}
+.navbar .resume {
+  background-color: #fd7b87;
+  color: #000000;
+}
+.page-skills {
+  background-color: #9b58b5;
+}
+.navbar .skills {
+  background-color: #9b58b5;
+}
+.page-skills li {
+  display: inline-block;
+  margin-left: 10px;
+}
 .brand {
   float: left;
+  padding: 10px 0 0 10px;
 }
 .group:before, .group:after {
   content: "";

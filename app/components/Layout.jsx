@@ -5,9 +5,16 @@ import NavBar from './NavBar/NavBar';
 export default class Layout extends React.Component {
   render() {
     return (
-      <div>
-        <NavBar />
-        {this.props.children}
+      <div className='layout'>
+        <div className='header'>
+          <NavBar />
+        </div>
+        <div className='content'>
+          {this.props.children}
+        </div>
+        <div className='footer'>
+          <a href='mailto:szabo.matthew@gmail.com'>Contact</a>
+        </div>
       </div>
     );
   }

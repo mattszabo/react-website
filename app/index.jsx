@@ -17,10 +17,11 @@ import {Router, Route, hashHistory, Redirect} from 'react-router';
 import Layout from './components/Layout';
 import Skills from './components/Skills';
 import Resume from './components/Resume';
-import Home from './components/Home'
-import Projects from './components/Projects'
-import Git from './components/Git'
+import Home from './components/Home';
+import Projects from './components/Projects';
+import Git from './components/Git';
 
+import './styles/normalise.css';
 import './styles/main.css';
 
 const app = (
