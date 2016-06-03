@@ -14,6 +14,7 @@ a {
   background-color: #313144;
 }
 .header {
+    padding-top: 2px;
 }
 .content {
   text-align: center;
@@ -48,6 +49,11 @@ a {
   padding: 10px 10px;
   width: 65px;
   text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,0));
+  border: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  border-radius: 8px 8px 0 0;
 }
 .navbar a:active {
   color: #4104C4;
@@ -60,38 +66,37 @@ a {
 }
 .navbar .home {
   background-color: #5fb3f9;
-  color: #000000;
 }
 .page-projects {
   background-color: #60ead3;
 }
 .navbar .projects {
   background-color: #60ead3;
-  color: #000000;
 }
 .page-git {
   background-color: #fda660;
 }
 .navbar .git {
   background-color: #fda660;
-  color: #000000;
 }
 .page-resume {
-  background-color: #fd7b87;
+  background-color: #ff4b57;
 }
 .navbar .resume {
-  background-color: #fd7b87;
-  color: #000000;
+  background-color: #ff4b57;
 }
 .page-skills {
-  background-color: #9b58b5;
+  background-color: #bb58b5;
 }
 .navbar .skills {
-  background-color: #9b58b5;
+  background-color: #bb58b5;
 }
 .page-skills li {
   display: inline-block;
   margin-left: 10px;
+}
+.navbar li.active {
+  background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0));
 }
 .brand {
   float: left;
