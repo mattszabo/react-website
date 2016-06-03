@@ -14,7 +14,7 @@ a {
   background-color: #313144;
 }
 .header {
-    padding-top: 2px;
+    padding-top: 15px;
 }
 .content {
   text-align: center;
@@ -39,6 +39,9 @@ a {
 }
 .brand {
   color: #3890E8;
+  font-size: 45px;
+  float: left;
+  padding: 0 0 0 10px;
 }
 .navbar ul {
   float: right;
@@ -46,7 +49,7 @@ a {
 }
 .navbar li {
   display: inline-block;
-  padding: 10px 10px;
+  padding: 15px 10px;
   width: 65px;
   text-align: center;
   background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,0));
@@ -92,7 +95,6 @@ a {
 }
 .navbar .resume.active {
   border-bottom: 1px solid #ff4b57;
-  background-image: 0;
 }
 .page-skills {
   background-color: #bb58b5;
@@ -109,10 +111,6 @@ a {
 }
 .navbar li.active {
   background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0));
-}
-.brand {
-  float: left;
-  padding: 10px 0 0 10px;
 }
 .group:before, .group:after {
   content: "";
