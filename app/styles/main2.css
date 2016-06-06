@@ -1,0 +1,125 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @wekilledit
+ Unwatch 1
+  Star 0
+  Fork 0 wekilledit/react-website
+ Code  Issues 5  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Tree: 7a0d5f4b96 Find file Copy pathreact-website/app/styles/main.css
+74bf208  a day ago
+ Matt Szabo added contact link
+0 contributors
+RawBlameHistory     110 lines (109 sloc)  1.63 KB
+html, body, h1, h2, h3, h4, p, div, ul, ol, li, a {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.layout {
+  background-color: #313144;
+}
+.header {
+}
+.content {
+  text-align: center;
+  margin: 0 10px 0 10px;
+}
+.content ul, .navbar ul {
+  list-style-type: none;
+}
+.footer {
+  text-align: center;
+  background-color: #313144;
+  color: #3890E8;
+  padding: 10px 0;
+  margin-right: 10px;
+}
+.navbar, .brand {
+  padding: 0 ;
+  margin: 0;
+  background-color: #313144;
+  color: #000000;
+  font-size: 18px;
+}
+.brand {
+  color: #3890E8;
+}
+.navbar ul {
+  float: right;
+  margin: 0 10px 0 0;
+}
+.navbar li {
+  display: inline-block;
+  padding: 10px 10px;
+  width: 65px;
+  text-align: center;
+}
+.navbar a:active {
+  color: #4104C4;
+}
+.page {
+  padding: 150px 0 150px 0;
+}
+.page-home {
+  background-color: #5fb3f9;
+}
+.navbar .home {
+  background-color: #5fb3f9;
+  color: #000000;
+}
+.page-projects {
+  background-color: #60ead3;
+}
+.navbar .projects {
+  background-color: #60ead3;
+  color: #000000;
+}
+.page-git {
+  background-color: #fda660;
+}
+.navbar .git {
+  background-color: #fda660;
+  color: #000000;
+}
+.page-resume {
+  background-color: #fd7b87;
+}
+.navbar .resume {
+  background-color: #fd7b87;
+  color: #000000;
+}
+.page-skills {
+  background-color: #9b58b5;
+}
+.navbar .skills {
+  background-color: #9b58b5;
+}
+.page-skills li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.brand {
+  float: left;
+  padding: 10px 0 0 10px;
+}
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+}
