@@ -4,11 +4,13 @@ This was my first attempt at a **react** app. It's a basic single page app witho
 It also makes use of some ES6+ code transpiled with babel, and a webpack config for both dev (with mot module replacement) and prod builds.
 
 ## installation
-npm install
+```git clone https://github.com/wekilledit/react-website.git .
+cd react-website
+npm install```
 
 ## running dev
-npm start
+```npm start```
 
 ## prod build
-npm run build
+```npm run build```
 
